@@ -6,12 +6,15 @@ export const pokemonApi = createApi({
   reducerPath: 'pokemonApi',
   baseQuery: fetchBaseQuery({ baseUrl: 'https://pokeapi.co/api/v2/' }),
   endpoints: (builder) => ({
+    getPokemonList: builder.query({
+      query: () => 'pokemon',
+    }),
     getPokemonById: builder.query({
-      query: (name) => `pokemon/${name}`,
+      query: (id) => `pokemon/${id}`,
     }),
   }),
 })
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
-export const { useGetPokemonByIdQuery } = pokemonApi
+export const { useGetPokemonByIdQuery, useGetPokemonListQuery } = pokemonApi
