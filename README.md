@@ -1,31 +1,45 @@
-# React + TypeScript + Vite
+## Pokemon Info App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a React application built with TypeScript, Redux Toolkit, and RTK Query to retrieve and display information about Pokemon. 
 
-Currently, two official plugins are available:
+### Features:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Fetches a list of Pokemon from the PokéAPI.
+* Stores the retrieved Pokemon list persistently.
+* Displays a list of Pokemon names.
+* Allows clicking on a Pokemon name to display its details.
 
-## Expanding the ESLint configuration
+### Technologies:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+* React
+* TypeScript
+* Redux Toolkit
+* RTK Query
 
-- Configure the top-level `parserOptions` property like this:
+### Development Principles:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+* **Code Separation:** Components, logic, and styling are kept separate for better organization and maintainability.
+* **Clean Code:** The code adheres to principles like readability, meaningful variable names, and proper formatting.
+* **Readability:** The code is easy to understand for both developers working on the project.
+* **Maintainability:** The code is well-structured and documented to facilitate future modifications and bug fixes.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
-# pokemon-list
+### API Endpoints Used:
+
+* **GET [https://pokeapi.co/api/v2/pokemon/](https://pokeapi.co/api/v2/pokemon/)** : Retrieves a list of Pokemon.
+* **GET [invalid URL removed]** : Retrieves details of a specific Pokemon by its ID. (Replace `:id` with the actual Pokemon ID)
+
+**Note:** This README doesn't include specific code examples, but provides an overview of the project's functionalities and development principles.
+
+### Getting Started:
+
+1. Clone the repository.
+2. Install dependencies: `npm install`
+3. Start the development server: `npm start`
+4. The application should run on `http://localhost:5173/` (default port).
+
+### Unit Tests:
+
+Unit tests are written for both the Pokemon list and detail screens using a suitable testing framework like Jest. These tests ensure that the components behave as expected under different scenarios.
+
+This README provides a high-level overview of the project. Further details about the implementation and testing can be found within the codebase itself.
+
